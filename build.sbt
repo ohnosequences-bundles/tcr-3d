@@ -1,20 +1,11 @@
 name          := "tcr3d"
 organization  := "ohnosequences-bundles"
-description   := "tcr3d project"
+description   := "TCR-3D R package bundle"
 
 bucketSuffix  := "era7.com"
 
-// libraryDependencies ++= Seq()
+libraryDependencies += "ohnosequences" %% "statika" % "2.0.0"
 
+wartremoverErrors in (Compile, compile) := Seq()
 
-// // For resolving dependency versions conflicts:
-// dependencyOverrides ++= Set()
-
-// // If you need to deploy this project as a Statika bundle:
-// generateStatikaMetadataIn(Compile)
-
-// // This includes tests sources in the assembled fat-jar:
-// fullClasspath in assembly := (fullClasspath in Test).value
-
-// // This turns on fat-jar publishing during release process:
-// publishFatArtifact in Release := true
+releaseOnlyTestTag := "ohnosequencesBundles.test.ReleaseOnlyTest"
